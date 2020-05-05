@@ -1,28 +1,22 @@
-
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
+  parser: "babel-eslint",
   globals: {
-    env: false
+    env: false,
   },
   env: {
     browser: true,
-    node: true
+    node: true,
   },
   parserOptions: {
-    sourceType: 'module'
+    sourceType: "module",
   },
   //  https:// github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
-  extends: [
-    'standard'
-  ],
+  extends: ["standard"],
   //  required to lint *.vue files
-  plugins: [
-    'html'
-  ],
+  plugins: ["html"],
   //  add your custom rules here
   rules: {
-
     /*Possible Errors*/
 
     // 数组和对象键值对最后一个逗号，
@@ -47,7 +41,7 @@ module.exports = {
     "no-control-regex": 2,
 
     // 禁止使用debugger语句
-    "no-debugger": process.env.NODE_ENV === 'production' ? 2 : 0,
+    "no-debugger": process.env.NODE_ENV === "production" ? 2 : 0,
 
     // 函数参数禁止重名
     "no-dupe-args": 2,
@@ -129,7 +123,7 @@ module.exports = {
     "block-scoped-var": 0,
 
     // 用来控制函数的复杂度，分支超过5时报错
-    "complexity": [0, 5],
+    complexity: [0, 5],
 
     // 不同分支的return语句不能返回不同的类型，要么一致要么都没有
     "consistent-return": 0,
@@ -147,7 +141,7 @@ module.exports = {
     //  [2, "multi", "consistent"] 保持前后语句的{ }一致
 
     //  default: [2, "all"] 全都需要{ }包围
-    "curly": 2,
+    curly: 2,
 
     // 所有的switch语句都必须要有一个default分支
     "default-case": 2,
@@ -172,10 +166,10 @@ module.exports = {
     //         allowPattern:  当属性名匹配提供的正则表达式时，允许使用[]方式取值,否则只能用.号取值
 
     //                        e.g [2, {"allowPattern": "^[a-z]+(_[a-z]+)+$"}]
-    "dot-notation": [2, { "allowKeywords": true }],
+    "dot-notation": [2, { allowKeywords: true }],
 
     // 在进行比较时，必须使用全等=== 和完全不等!==
-    "eqeqeq": [0, "allow-null"],
+    eqeqeq: [0, "allow-null"],
 
     // 在for-in 循环中要使用if语句
     "guard-for-in": 2,
@@ -246,7 +240,7 @@ module.exports = {
     "no-iterator": 2,
 
     // 禁止使用label语句，以避免无限循环
-    "no-labels": [2, { "allowLoop": false, "allowSwitch": false }],
+    "no-labels": [2, { allowLoop: false, allowSwitch: false }],
 
     // 禁止使用不必要的嵌套代码块
     "no-lone-blocks": 2,
@@ -290,7 +284,7 @@ module.exports = {
     "no-proto": 2,
 
     // 避免重复声明一个变量
-    "no-redeclare": [2, { "builtinGlobals": true }],
+    "no-redeclare": [2, { builtinGlobals: true }],
 
     // 不要在return语句中使用赋值语句
     "no-return-assign": [2, "always"],
@@ -314,7 +308,10 @@ module.exports = {
     "no-unmodified-loop-condition": 2,
 
     // 禁止在代码中出现没有被使用到的表达式或值
-    "no-unused-expressions": [2, { "allowShortCircuit": true, "allowTernary": true }],
+    "no-unused-expressions": [
+      2,
+      { allowShortCircuit: true, allowTernary: true },
+    ],
 
     // 禁止在代码中出现没有被使用到的标签
     "no-unused-labels": 2,
@@ -329,13 +326,16 @@ module.exports = {
     "no-void": 2,
 
     // 生产代码中不能出现warning-comments包含的注释
-    "no-warning-comments": [2, { "terms": ["todo", "fixme", "any other term"], "location": "anywhere" }],
+    "no-warning-comments": [
+      2,
+      { terms: ["todo", "fixme", "any other term"], location: "anywhere" },
+    ],
 
     // 不要使用with语句
     "no-with": 2,
 
     // 在使用parseInt()方法时，必须要传递第二个参数来帮助解析。
-    "radix": 2,
+    radix: 2,
 
     // 在通过var声明变量时，应该放在代码所在作用域的顶部
     "vars-on-top": 2,
@@ -346,13 +346,12 @@ module.exports = {
     // yoda条件语句就是对象字面量应该写在比较操作符的左边，而变量应该写在比较操作符的右边
 
     // 默认的规则要求，变量写在左边而字面量写在右边
-    "yoda": 2,
-
+    yoda: 2,
 
     /*Strict Mode*/
 
     // 使用严格模式
-    "strict": 2,
+    strict: 2,
 
     /*Variables*/
 
@@ -391,7 +390,6 @@ module.exports = {
 
     // 所有的变量都应该先定义后使用
     "no-use-before-define": 0,
-
 
     /*Node.js and CommonJS*/
 
@@ -442,13 +440,13 @@ module.exports = {
     "block-spacing": [2, "always"],
 
     // 大括号的样式，比如下面的大括号语法采用『1tbs』,允许单行样式
-    "brace-style": [2, "1tbs", { "allowSingleLine": true }],
+    "brace-style": [2, "1tbs", { allowSingleLine: true }],
 
     // 强制使用驼峰命名
-    "camelcase": 0,
+    camelcase: 0,
 
     // 规定了逗号前后的空白，默认配置规定逗号前面没有空白，而逗号后面需要留空白
-    "comma-spacing": [2, { "before": false, "after": true }],
+    "comma-spacing": [2, { before: false, after: true }],
 
     // 规定了逗号放的位置，默认配置逗号应该放在行末，如果设置为first，逗号就应放在行首
     "comma-style": [2, "last"],
@@ -488,22 +486,22 @@ module.exports = {
     "id-blacklist": [0, "data", "err", "e", "cb", "callback"],
 
     // 规定标识符的长度，默认配置标识符最少两个字符
-    "id-length": [2, { "min": 1 }],
+    "id-length": [2, { min: 1 }],
 
     // 命名检测，标识符命名需和配置中的正则表达式匹配，但是该规则对函数调用无效。
-    "id-match": [0, "^[a-z]+([A-Z][a-z]+)*$", { "properties": false }],
+    "id-match": [0, "^[a-z]+([A-Z][a-z]+)*$", { properties: false }],
 
     //  统一代码缩进方式，默认值是4 spaces.
-    "indent": 0,
+    indent: 0,
 
     // 规定了在JSX中的属性值是使用单引号还是双引号,默认使用双引号
     "jsx-quotes": [2, "prefer-double"],
 
     // 该规则规定了在对象字面量语法中key和value之间的空白，冒号前不要留空格，冒号后面需留一个空格
-    "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
+    "key-spacing": [2, { beforeColon: false, afterColon: true }],
 
     //  规定了keyword前后是否需要留一个空格
-    "keyword-spacing": [0, { "before": true, "after": true, "overrides": {} }],
+    "keyword-spacing": [0, { before: true, after: true, overrides: {} }],
 
     // 统一换行符，"\n" unix(for LF) and "\r\n" for windows(CRLF)，默认unix
     "linebreak-style": 0,
@@ -560,7 +558,7 @@ module.exports = {
     "no-mixed-spaces-and-tabs": 2,
 
     // 不要留超过规定数目的空白行
-    "no-multiple-empty-lines": [2, { "max": 3 }],
+    "no-multiple-empty-lines": [2, { max: 3 }],
 
     // 在if语句中使用了否定表达式，同时else语句又不为空，那么这样的if-else语句将被视为不合法，为什么不将其反过来这样代码更容易理解，该规则同样适用于三元操作符
     "no-negated-condition": 0,
@@ -590,7 +588,7 @@ module.exports = {
     "no-underscore-dangle": 0,
 
     // 禁止使用没有必要的三元操作符，因为用有些三元操作符可以使用其他语句替换
-    "no-unneeded-ternary": [0, { "defaultAssignment": false }],
+    "no-unneeded-ternary": [0, { defaultAssignment: false }],
 
     // 禁止属性操作符.的前后和[之前有空格
     "no-whitespace-before-property": 2,
@@ -599,13 +597,17 @@ module.exports = {
     "object-curly-spacing": [0, "always"],
 
     // 规定了在每个函数中声明变量是否只使用一次var，该规则同样适用于let和const
-    "one-var": [2, { "initialized": "never" }],
+    "one-var": [2, { initialized: "never" }],
 
     // 规定了使用赋值操作符的简写形式
     "operator-assignment": [2, "always"],
 
     // 在换行时操作符应该放在行首还是行尾。还可对某些操作符进行重写。
-    "operator-linebreak": [2, "after", { "overrides": { "?": "before", ":": "before" } }],
+    "operator-linebreak": [
+      2,
+      "after",
+      { overrides: { "?": "before", ":": "before" } },
+    ],
 
     // 在代码块中，代码块的开始和结尾是否应该留一个空行
     "padded-blocks": 0,
@@ -614,22 +616,21 @@ module.exports = {
     "quote-props": [0, "always"],
 
     // 在JavaScript中有三种方式定义字符串，双引号、单引号、反义符（ECMAScript2015）。规定了字符串定义的方式
-    "quotes": [0, "single", "avoid-escape"],
+    quotes: [0, "single", "avoid-escape"],
 
     // 注释格式要求JSDoc格式
-    "require-jsdoc": [0, {
+    "require-jsdoc": [
+      0,
+      {
+        require: {
+          FunctionDeclaration: true,
 
-        "require": {
+          MethodDefinition: false,
 
-            "FunctionDeclaration": true,
-
-            "MethodDefinition": false,
-
-            "ClassDeclaration": false
-
-        }
-
-    }],
+          ClassDeclaration: false,
+        },
+      },
+    ],
 
     // JavaScript不要求在每行末尾加上分号，这是因为JavaScript引擎会决定是否需要在行末加上分号，然后自动帮我们在行末加上分号，这一特性被成为ASI(automatic semicolon insertion)，也是JavaScript语言最富争议的特性之一
 
@@ -638,10 +639,10 @@ module.exports = {
     // 两个可选参数，always 和never
 
     // 默认配置always，要求在行末加上分号。
-    "semi": [0, "always"],
+    semi: [0, "always"],
 
     // 该规则用来规定分号前后是否加空格，默认配置如下
-    "semi-spacing": [2, { "before": false, "after": true }],
+    "semi-spacing": [2, { before: false, after: true }],
 
     // 要求对同一个模块里的import声明按字母排序
     "sort-imports": 0,
@@ -666,14 +667,27 @@ module.exports = {
     // words - applies to unary word operators such as: new, delete, typeof, void, yield
 
     // nonwords - applies to unary operators such as: -, +, --, ++, !, !!
-    "space-unary-ops": [2, { "words": true, "nonwords": false }],
+    "space-unary-ops": [2, { words: true, nonwords: false }],
 
     // 规定是否需要在代码注释起始符//  or /*后面至少紧跟一个空格
-    "spaced-comment": [2, "always", { "markers": ["global", "globals", "eslint", "eslint-disable", "*package", "!", ","] }],
+    "spaced-comment": [
+      2,
+      "always",
+      {
+        markers: [
+          "global",
+          "globals",
+          "eslint",
+          "eslint-disable",
+          "*package",
+          "!",
+          ",",
+        ],
+      },
+    ],
 
     // 要求在正则表达式的双斜杠外面加一个圆括号，来消除歧义
     "wrap-regex": 0,
-
 
     /*ECMAScript 6*/
 
@@ -688,13 +702,13 @@ module.exports = {
     "arrow-parens": [0, "always"],
 
     // 规定了箭头函数的箭头前后是否加空格
-    "arrow-spacing": [2, { "before": true, "after": true }],
+    "arrow-spacing": [2, { before: true, after: true }],
 
     // 保证constructor函数中super()应正确出现，比如在继承的classes中（派生类）必须使用super，否则（非派生类）不要使用super。
     "constructor-super": 2,
 
     // 规定generator函数中星号前后的空白
-    "generator-star-spacing": [2, { "before": true, "after": true }],
+    "generator-star-spacing": [2, { before: true, after: true }],
 
     // 禁止覆盖class命名，也就是说变量名不要和class名重名
     "no-class-assign": 2,
@@ -712,10 +726,42 @@ module.exports = {
     "no-new-symbol": 2,
 
     // 该规则可以定义不允许在应用中导入的模块
-    "no-restricted-imports": [2,
+    "no-restricted-imports": [
+      2,
 
-        "assert", "buffer", "child_process", "cluster", "crypto", "dgram", "dns", "domain", "events", "freelist", "fs", "http", "https", "module", "net", "os", "path", "punycode", "querystring", "readline", "repl", "smalloc", "stream", "string_decoder", "sys", "timers", "tls", "tracing", "tty", "url", "util", "vm", "zlib"
-
+      "assert",
+      "buffer",
+      "child_process",
+      "cluster",
+      "crypto",
+      "dgram",
+      "dns",
+      "domain",
+      "events",
+      "freelist",
+      "fs",
+      "http",
+      "https",
+      "module",
+      "net",
+      "os",
+      "path",
+      "punycode",
+      "querystring",
+      "readline",
+      "repl",
+      "smalloc",
+      "stream",
+      "string_decoder",
+      "sys",
+      "timers",
+      "tls",
+      "tracing",
+      "tty",
+      "url",
+      "util",
+      "vm",
+      "zlib",
     ],
 
     // 在构造函数中，禁止在super()调用前使用this/super对象
@@ -757,7 +803,6 @@ module.exports = {
     "template-curly-spacing": [2, "never"],
 
     // yield*表达式中的*号前后是否留空格，默认after，比如yield* other()
-    "yield-star-spacing": [2, "after"]
-
-  }
-}
+    "yield-star-spacing": [2, "after"],
+  },
+};
